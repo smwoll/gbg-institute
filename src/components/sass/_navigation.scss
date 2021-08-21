@@ -1,0 +1,236 @@
+.nav-logo {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  svg,
+  img {
+    width: 100%;
+    max-width: 80vw;
+    margin: auto;
+  }
+  margin-top: 50px;
+}
+
+.navbar-toggler {
+  position: absolute;
+  z-index: 9999;
+  background: none;
+  border: none;
+  right: 0;
+}
+.navbar-toggler.active {
+  position: fixed;
+  z-index: 9999;
+  background: none;
+  border: none;
+  right: 0;
+}
+// @include media("<large") {
+//   .navbar-menu {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     height: 100vh !important;
+//     width: 100%;
+//     overflow-y: auto;
+//     visibility: hidden;
+//     background: $red;
+//     transition: all 0.2s ease-in-out;
+//     transform: translateX(100%);
+//     z-index: 99;
+//     display: grid;
+//     opacity: 0.8;
+//     place-items: center;
+//     ul li {
+//       display: none;
+//     }
+//     a {
+//       color: $white;
+//     }
+//   }
+// }
+
+.navbar-links {
+  display: grid;
+  align-items: center;
+  height: max-content;
+
+  a {
+    text-decoration: none;
+    font-size: clamp(1em, 14vw, 4em);
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    padding: 0px 10px;
+    width: max-content;
+    &.sub-item {
+      font-size: clamp(1em, 6vw, 3em);
+    }
+    &:hover {
+      color: $dark;
+      background: $white;
+      transform: scale(1.02);
+    }
+  }
+}
+
+.navbar-item.active {
+  color: $dark;
+  pointer-events: none;
+}
+
+.navbar-menu.active {
+  visibility: visible;
+  transform: translateX(0);
+  height: 100vh;
+  opacity: 1;
+}
+
+// end mobile
+
+.navbar-toggler {
+  z-index: 999;
+}
+
+.navbar {
+  .menu-item {
+    font-size: 2rem;
+    opacity: 1;
+    .nav-link {
+      color: $red;
+      transition: all 0.2s ease;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+// navbar toggler icon
+
+/* Icon 1 */
+
+.navbar-toggler {
+  display: block;
+  width: 60px;
+  height: 45px;
+  margin: 10px 10px 10px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.navbar-toggler span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: $white;
+  border-radius: 0;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.navbar-toggler:hover span {
+  transform: scaleX(1.2) translateX(-10px);
+  transform-origin: right center;
+}
+
+.navbar-toggler span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.navbar-toggler span:nth-child(2) {
+  top: 18px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.navbar-toggler span:nth-child(3) {
+  top: 36px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.navbar-toggler.active span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+.navbar-toggler.active span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.navbar-toggler.active span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
+}
+
+// nav news
+.nav-news {
+  border: 3px $red solid;
+  padding: 10px;
+  // @include media("<large") {
+  //   display: none;
+  // }
+
+  // @include media(">large") {
+  //   max-width: 20vw;
+  //   margin-top: 20px;
+  // }
+  h2 {
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      margin: 1em 0;
+    }
+  }
+  a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 700;
+    transition: all ease 0.4s;
+    &:hover {
+      background: $white;
+      background-size: cover;
+      color: $dark;
+    }
+  }
+}

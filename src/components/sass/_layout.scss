@@ -1,0 +1,48 @@
+.layout-wrapper {
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
+}
+.navbar {
+  display: block;
+  grid-column: 1 / 2;
+}
+.nav-logo {
+  margin-top: 0;
+  margin-bottom: 4em;
+  max-width: 20vw;
+}
+footer {
+  grid-column: 1 / 4;
+}
+
+.navbar-menu {
+  background-color: $dark;
+  .navbar-links {
+    display: grid;
+    align-items: flex-start;
+    height: auto;
+
+    a {
+      text-decoration: none;
+      font-size: clamp(1em, 3vw, 4em);
+      font-weight: 800;
+      text-transform: uppercase;
+      transition: all 0.4s ease;
+      margin: 5px 0;
+      padding: 0px 10px;
+      width: max-content;
+      &.sub-item {
+        font-size: clamp(1em, 2vw, 3em);
+      }
+      &:hover {
+        color: $dark;
+        background: $white;
+        transform: none;
+      }
+    }
+  }
+  .navbar-item.active {
+    color: $dark;
+    background: $white;
+  }
+}
