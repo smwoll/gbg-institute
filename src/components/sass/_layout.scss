@@ -1,19 +1,15 @@
-.layout-wrapper {
-  display: grid;
-  grid-template: auto 1fr auto / auto 1fr auto;
-}
-.navbar {
-  display: block;
-  grid-column: 1 / 2;
-}
-.nav-logo {
-  margin-top: 0;
-  margin-bottom: 4em;
-  max-width: 20vw;
-}
-footer {
-  grid-column: 1 / 4;
-}
+// .layout-wrapper {
+//   display: grid;
+//   grid-template: auto 1fr auto / auto 1fr auto;
+// }
+// .navbar {
+//   display: block;
+//   grid-column: 1 / 2;
+// }
+
+// footer {
+//   grid-column: 1 / 4;
+// }
 
 .navbar-menu {
   background-color: $dark;

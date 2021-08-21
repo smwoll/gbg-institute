@@ -12,14 +12,21 @@ const Navbar = class extends React.Component {
     };
   }
 
+  toggleHtmlMenuClass = () => {
+    const html = document.querySelector("html");
+    html.classList.toggle("menu-active");
+  };
+
   toggleHamburger = () => {
     // toggle the active boolean in the state
+    this.toggleHtmlMenuClass();
     this.setState(
       {
         active: !this.state.active,
       },
       // after state has been updated,
       () => {
+        console.log(Navbar);
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
@@ -42,11 +49,14 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             {/* Hamburger menu */}
+
             <button
               name="Navigation Menu Toggle"
               className={`navbar-toggler ${this.state.navBarActiveClass}`}
               data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
+              onClick={() => {
+                this.toggleHamburger();
+              }}
             >
               <span></span>
               <span></span>
