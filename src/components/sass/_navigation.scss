@@ -1,3 +1,8 @@
+// freeze movement when menu-active class is present on the html element
+html.menu-active {
+  overflow: hidden;
+}
+
 .nav-logo {
   width: 100%;
   display: inline-block;

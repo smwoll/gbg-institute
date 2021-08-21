@@ -52,6 +52,7 @@ const Navbar = class extends React.Component {
 
             <button
               name="Navigation Menu Toggle"
+              aria-label="Toggle Menu"
               className={`navbar-toggler ${this.state.navBarActiveClass}`}
               data-target="navMenu"
               onClick={() => {
@@ -61,6 +62,10 @@ const Navbar = class extends React.Component {
               <span></span>
               <span></span>
               <span></span>
+              <span className="button-label screen-reader-text">
+                Toggle Navigation Menu
+              </span>
+              
             </button>
           </div>
           <div
