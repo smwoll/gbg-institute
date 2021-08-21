@@ -7,7 +7,7 @@ import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
-const ProductPageTemplate = ({
+export const ProductPageTemplate = ({
   image,
   title,
   heading,
