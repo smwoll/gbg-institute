@@ -1,7 +1,9 @@
 @charset 'utf-8';
 
 // base
+@import "normalize";
 @import "colors";
+@import "variables";
 
 //  layout
 @import "navigation";
