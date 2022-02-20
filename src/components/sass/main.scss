@@ -1,9 +1,10 @@
 @charset 'utf-8';
 
 // base
-@import "normalize";
+@import "reset";
 @import "colors";
 @import "variables";
+@import "base";
 
 //  layout
 @import "navigation";
@@ -14,7 +15,7 @@
 @import "components";
 
 // pages
-// @import "pages/index-page";
+@import "pages/index-page";
 
 // theme
 // @import "theme";

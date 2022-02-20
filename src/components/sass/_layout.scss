@@ -1,7 +1,8 @@
-// .layout-wrapper {
-//   display: grid;
-//   grid-template: auto 1fr auto / auto 1fr auto;
-// }
+.layout-wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
 // .navbar {
 //   display: block;
 //   grid-column: 1 / 2;
@@ -41,4 +42,12 @@
     color: $dark;
     background: $white;
   }
+}
+
+.container {
+  width: min(100%, clamp(500px, 92vw, 1400px));
+  max-width: 100%;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  margin: auto;
 }
