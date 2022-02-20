@@ -5,6 +5,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const IndexPageTemplate = ({
   image,
@@ -15,16 +16,9 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => (
-  <div>
+  <div className="index-page">
     <div
       className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
     >
       <div
         style={{
@@ -44,11 +38,19 @@ export const IndexPageTemplate = ({
         </h3>
       </div>
     </div>
+
+    <PreviewCompatibleImage
+    imageInfo={{
+    image: image,
+    alt: `featured image thumbnail for post`,
+    }}
+    />
+
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
           <div className="columns">
-            <div className="column is-10 is-offset-1">
+            <div className="column">
               <div className="content">
                 <div className="content">
                   <div className="tile">
@@ -74,17 +76,7 @@ export const IndexPageTemplate = ({
                     </Link>
                   </div>
                 </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -110,7 +102,7 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
+    <Layout className="front-page-layout">
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
