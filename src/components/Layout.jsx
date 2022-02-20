@@ -6,11 +6,12 @@ import "./sass/main.scss";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, className }) => {
   const { title, description } = useSiteMetadata();
+  const wrapperClasses = `layout-wrapper ${className}`;
 
   return (
-    <div className="layout-wrapper">
+    <div className={wrapperClasses}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -50,7 +51,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <main className="site-main container">{children}</main>
       <Footer />
     </div>
   );
