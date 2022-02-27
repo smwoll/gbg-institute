@@ -45,7 +45,9 @@
 }
 
 .container {
-  width: clamp(500px, 92vw, 1400px);
+  --container-width: min(100%, clamp(500px, 92vw, 1400px));
+  width: calc(100% - 40px);
+  width: var(--container-width);
   max-width: 100%;
   padding-left: 1vw;
   padding-right: 1vw;
