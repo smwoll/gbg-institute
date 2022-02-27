@@ -39,17 +39,10 @@ export const IndexPageTemplate = ({
       </div>
     </div>
 
-    <PreviewCompatibleImage
-    imageInfo={{
-    image: image,
-    alt: `featured image thumbnail for post`,
-    }}
-    />
-
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
-          <div className="columns">
+          <div className="front-page__columns">
             <div className="column">
               <div className="content">
                 <div className="content">
@@ -60,7 +53,23 @@ export const IndexPageTemplate = ({
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
                 </div>
-                <div className="columns">
+              </div>
+            </div>
+
+            <div className="column">
+              <PreviewCompatibleImage
+              imageInfo={{
+              image: image,
+              alt: `featured image thumbnail for post`,
+              }}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div className="columns">
                   <div className="column is-12">
                     <h3 className="has-text-weight-semibold is-size-2">
                       {heading}
@@ -76,13 +85,7 @@ export const IndexPageTemplate = ({
                     </Link>
                   </div>
                 </div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
   </div>
 );
 
