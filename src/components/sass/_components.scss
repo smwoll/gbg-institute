@@ -4,3 +4,41 @@
   height: 0;
   width: 0;
 }
+
+.team-roll {
+  width: 100%;
+  display: grid;
+  gap: 24px;
+  margin: 24px 0;
+
+  &__item {
+    
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
+
+  &__image-placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: $powderblue;
+    border-radius: 16px;
+  }
+
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    
+    & > * {
+      flex: 1 1 400px;
+    }
+
+    & > *:first-child {
+      flex: 1 1 140px;
+    }
+  }
+}

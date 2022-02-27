@@ -8,22 +8,14 @@ export default class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <div
-          className=""
-          style={{
-            backgroundImage: `url('/img/blog-index.jpg')`,
-          }}
+          className="topper"
         >
           <h1
-            className=""
-            style={{
-              boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-              backgroundColor: '#f40',
-              color: 'white',
-              padding: '1rem',
-            }}
+            className="page-title"
           >
             Meet the Team
           </h1>
+          <p>We're an ambitious group of people.</p>
         </div>
         <section className="section">
           <div className="container">

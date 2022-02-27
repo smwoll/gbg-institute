@@ -2,3 +2,14 @@ html {
     background-color: $eggshell;
 }
 
+a {
+    text-decoration: underline;
+    color: $darkblue;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 3px;
+    transition: .4s;
+
+    &:hover {
+        color: $brightblue;
+    }
+}
