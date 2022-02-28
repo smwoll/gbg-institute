@@ -6,19 +6,36 @@
 }
 
 .team-roll {
+  --inner-item-width: 40%;
   width: 100%;
   display: grid;
   gap: 24px;
   margin: 24px 0;
+  position: relative;
 
   &__item {
     
   }
 
   &__image {
-    width: 100%;
+    width: var(--inner-item-width);
+    height: auto;
     aspect-ratio: 1;
     overflow: hidden;
+    border-radius: $border-radius;
+    position: relative;
+
+    div {
+      height: 100%!important;
+      width: 100%!important;
+    }
+
+    img, picture {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 
   &__image-placeholder {
@@ -34,11 +51,11 @@
     gap: 24px;
     
     & > * {
-      flex: 1 1 400px;
+      flex: 1 1 160px;
     }
 
-    & > *:first-child {
-      flex: 1 1 140px;
+    & > *:nth-child(even) {
+      flex: 1 1 500px;
     }
   }
 }
