@@ -7,6 +7,7 @@
     "bulma": "^0.9.0",
     "gatsby": "^3.12.0",
     "gatsby-image": "^3.11.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-netlify": "^3.12.0",
     "gatsby-plugin-netlify-cms": "^5.12.0",
     "gatsby-plugin-purgecss": "^5.0.0",
