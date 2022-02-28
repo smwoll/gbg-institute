@@ -18,7 +18,8 @@
   width: calc(100% - 40px);
   width: var(--container-width);
   max-width: 100%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: var(--container-padding, 12px);
   padding-right: var(--container-padding, 12px);
 }
