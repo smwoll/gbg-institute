@@ -18,3 +18,15 @@ a {
         color: $brightblue;
     }
 }
+
+#___gatsby {
+    min-height: 100%;
+    position: relative;
+    display: grid;
+}
+
+.layout-wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}

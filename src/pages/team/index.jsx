@@ -18,11 +18,11 @@ export default class BlogIndexPage extends React.Component {
           <p>We're an ambitious group of people.</p>
         </div>
         <section className="section">
-          <div className="container">
+          
             <div className="content">
               <TeamRoll />
             </div>
-          </div>
+          
         </section>
       </Layout>
     )
