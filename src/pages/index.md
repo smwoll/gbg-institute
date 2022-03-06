@@ -65,7 +65,7 @@ main:
   image3:
     alt: Coffee beans
     image: /img/products-grid1.jpg
-image: /img/home-jumbotron.jpg
+image: /img/gbg-edit.jpg
 description: DESCRIPTION - Kaldi is the ultimate spot for coffee lovers who want
   to learn about their java’s origin and support the farmers that grew it. We
   take coffee production, roasting and brewing seriously and we’re glad to pass
