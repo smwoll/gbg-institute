@@ -50,7 +50,10 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Image, name: image, widget: image}
+          - {label: Image 2, name: imageTwo, widget: image}
+          - {label: Image 3, name: imageThree, widget: image}
           - {label: Description, name: description, widget: string}
+          - {label: CTA, name: cta, widget: object, fields: [{label: "Button Text", name: text, widget: string}, {label: "Button Link", name: link, widget: string, default: "https://", required: true, hint: "Add a URL for the CTA Button.", pattern: ['[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?', "Please enter a valid URL."]}]}
           - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
       - file: "src/pages/about/index.md"
         label: "About"
