@@ -11,6 +11,7 @@ export const IndexPageTemplate = ({
   imageTwo,
   imageThree,
   description,
+  cta,
   intro,
 }) => (
   <div className="index-page">
@@ -26,7 +27,19 @@ export const IndexPageTemplate = ({
         <div className="images">
           <div className="front-page__columns">
             <div className="description">
-              {description}
+
+              <p>
+                {description}
+              </p>
+
+              {cta && (
+                <p>
+                <Link className="button" to={cta.link}>
+                {cta.text}
+              </Link>  
+                </p>
+              
+            )}
             </div>
 
             <div className="column">
@@ -72,11 +85,11 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   imageTwo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   imageThree: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
   description: PropTypes.string,
+  cta: PropTypes.shape({
+    text: PropTypes.string,
+    link: PropTypes.string,
+  }),
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -91,11 +104,8 @@ const IndexPage = ({ data }) => {
         imageOne={frontmatter.imageOne}
         imageTwo={frontmatter.imageTwo}
         imageThree={frontmatter.imageThree}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
+        cta={frontmatter.cta}
         intro={frontmatter.intro}
       />
     </Layout>
@@ -138,13 +148,11 @@ export const pageQuery = graphql`
             }
           }
         }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
         description
+        cta {
+          text
+          link
+        }
         intro {
           blurbs {
             image {
