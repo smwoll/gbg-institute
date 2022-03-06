@@ -4,78 +4,57 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
+  imageOne,
+  imageTwo,
+  imageThree,
   description,
   intro,
 }) => (
   <div className="index-page">
-    <div
-      className="full-width-image margin-top-0"
-    >
-      <div
-        style={{
-          display: "flex",
-          height: "150px",
-          lineHeight: "1",
-          justifyContent: "space-around",
-          alignItems: "left",
-          flexDirection: "column",
-        }}
-      >
-        <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
-          {title}
-        </h1>
-        <h3 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
-          {subheading}
-        </h3>
-      </div>
-    </div>
 
     <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
+        <div className="title">
+          <h1>
+          <span>Girls </span><br />
+          <span>Building </span><br />
+          <span>Girls</span>
+          </h1>
+        </div>
+        <div className="images">
           <div className="front-page__columns">
-            <div className="column">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-              </div>
+            <div className="description">
+              {description}
             </div>
 
             <div className="column">
               <PreviewCompatibleImage
               imageInfo={{
-              image: image,
+              image: imageOne,
+              alt: `featured image thumbnail for post`,
+              }}
+              />
+              <PreviewCompatibleImage
+              imageInfo={{
+              image: imageTwo,
+              alt: `featured image thumbnail for post`,
+              }}
+              />
+              <PreviewCompatibleImage
+              imageInfo={{
+              image: imageThree,
               alt: `featured image thumbnail for post`,
               }}
               />
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
+
                 </div>
                 <Features gridItems={intro.blurbs} />
                 <div className="columns">
@@ -91,6 +70,8 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  imageTwo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  imageThree: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
@@ -107,7 +88,9 @@ const IndexPage = ({ data }) => {
   return (
     <Layout className="front-page-layout">
       <IndexPageTemplate
-        image={frontmatter.image}
+        imageOne={frontmatter.imageOne}
+        imageTwo={frontmatter.imageTwo}
+        imageThree={frontmatter.imageThree}
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
@@ -134,7 +117,21 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
+        imageOne {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        imageTwo {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        imageThree {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
