@@ -2,6 +2,7 @@
 heading: heading -Great coffee with a conscience
 subheading: subheading - Support sustainable farming while enjoying a cup
 templateKey: index-page
+imageOne: /img/gbg-edit.jpg
 imageTwo: /img/gbg-edit.jpg
 imageThree: /img/gbg-edit.jpg
 mainpitch:

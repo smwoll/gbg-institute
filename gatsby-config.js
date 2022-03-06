@@ -5,6 +5,8 @@ module.exports = {
       "We’re an organization dedicated to helping young Black women navigate workspaces and bridge the gap between their goals and the necessary tools to reach them. ",
   },
   plugins: [
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {
@@ -38,8 +40,6 @@ module.exports = {
         name: "images",
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {
